@@ -1,4 +1,4 @@
-﻿//preston waters, maze, 10/25/31
+﻿//preston waters, maze, 10/25/25
 Console.Title = "Maze Game";
 
         // Step 1: Display intro
@@ -7,4 +7,14 @@ Console.Title = "Maze Game";
         Console.WriteLine("Press any key to start...");
         Console.ReadKey(true);
 
-        
+        // Step 2: Load the maze from the file
+        string[] mazeRows = File.ReadAllLines("map.txt");
+
+        // Clear screen and print maze
+        Console.Clear();
+        foreach (string row in mazeRows)
+        {
+            Console.WriteLine(row);
+        }
+
+       
