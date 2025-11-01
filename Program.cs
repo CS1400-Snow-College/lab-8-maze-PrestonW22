@@ -54,6 +54,16 @@ Console.Title = "Maze Game";
              // Step 4: Try moving
             TryMove(proposedTop, proposedLeft, mazeRows, ref cursorTop, ref cursorLeft);
 
+            // Step 5: Check for win condition
+            if (mazeRows[cursorTop][cursorLeft] == '*')
+            {
+                Console.Clear();
+                Console.WriteLine(" yay you won! ");
+                Console.WriteLine("Press any key to exit...");
+                Console.ReadKey(true);
+                break;
+            }
+
            
         } while (running);
 
